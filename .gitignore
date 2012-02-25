@@ -1,0 +1,10 @@
+bin/
+eggs/
+develop-eggs/
+parts/
+var/
+coverage/
+*.pyc
+*.pyo
+
+
