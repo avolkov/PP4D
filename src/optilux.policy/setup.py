@@ -15,24 +15,28 @@ setup(name='optilux.policy',
         "Programming Language :: Python",
         ],
       keywords='',
-      author='',
-      author_email='',
-      url='http://svn.plone.org/svn/collective/',
+      author='Alex Volkov',
+      author_email='alex@flamy.ca',
+      url='http://flamy.ca/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['optilux'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'setuptools',
+        'setuptools',
+	'Plone',
           # -*- Extra requirements: -*-
       ],
+	extras_require={
+		'test':['plone.app.testing',]
+	}
       entry_points="""
       # -*- Entry points: -*-
 
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
+#      setup_requires=["PasteScript"],
+#      paster_plugins=["ZopeSkel"],
       )
