@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<rolemap>
+  <roles>
+    <role name="Anonymous"/>
+    <role name="Authenticated"/>
+    <role name="Contributor"/>
+    <role name="Editor"/>
+    <role name="Manager"/>
+    <role name="Member"/>
+    <role name="Owner"/>
+    <role name="Reader"/>
+    <role name="Reviewer"/>
+    <role name="Site Administrator"/>
+    <role name="StaffMember"/>
+  </roles>
+  <permissions>
+    <permission name="View" acquire="True">
+      <role name="Contributor"/>
+      <role name="Editor"/>
+      <role name="Manager"/>
+      <role name="Owner"/>
+      <role name="Reader"/>
+      <role name="Site Administrator"/>
+      <role name="StaffMember"/>
+    </permission>
+  </permissions>
+</rolemap>

@@ -3,9 +3,9 @@ import os
 
 version = '1.0'
 
-setup(name='optilux.policy',
+setup(name='optilux.theme',
       version=version,
-      description="PP4D example project",
+      description="Optilux Diazo theme",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
@@ -15,24 +15,20 @@ setup(name='optilux.policy',
         "Programming Language :: Python",
         ],
       keywords='',
-      author='Alex Volkov',
-      author_email='alex@flamy.ca',
-      url='http://flamy.ca/',
+      author='',
+      author_email='',
+      url='http://svn.plone.org/svn/collective/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['optilux'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-        'setuptools',
-        'Plone',
-         # -*- Extra requirements: -*-
-        'Products.PloneFormGen',
-        'optilux.theme'
+          'setuptools',
+          # -*- Extra requirements: -*-
+          'plone.app.theming'
       ],
-      extras_require={
-        'test':['plone.app.testing',]
-      },
+      extras_require = {'test':['plone.app.testing']},
       entry_points="""
       # -*- Entry points: -*-
 
