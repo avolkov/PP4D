@@ -24,6 +24,10 @@
             theme-children="/html/head"
             />
 		<copy attributes="class id dir" content="/html/body" theme="/html/body" />
+		<!--Logo link target-->
+		<copy attributes="href" css:content="#portal-logo" css:theme="#logo" />
+		<!-- I want to have default plone logo -->
+		<replace css:content-children="#portal-logo" css:theme-children="#logo" />
         <replace css:content="#content" css:theme="#document-content" />
         <replace css:content="#edit-bar" css:theme="#document-content" />
 	</rules>
