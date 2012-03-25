@@ -98,7 +98,7 @@ body.noRightColumn #column-content {
 }
 
 #global-navigation li a {
-    color: #FFF;
+    color: red;
     font-weight: bold;
     font-style: italic;
     text-transform: uppercase;

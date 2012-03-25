@@ -28,8 +28,37 @@
 		<copy attributes="href" css:content="#portal-logo" css:theme="#logo" />
 		<!-- I want to have default plone logo -->
 		<replace css:content-children="#portal-logo" css:theme-children="#logo" />
+		<!-- Site actions (Site Map, Accessibility, Contact)-->
+		<replace css:content="#portal-siteactions li" css:theme-children="#actions" />
+		<!-- User actions (Dashboard, Preferences, Log Out)-->
+		<after css:content="#portal-personaltools li" css:theme-children="#actions" />
+		<!-- no personal bar for anonymous users, instead build a list of elements using XSL elements-->
+		<after css:theme-children="#actions">
+			<xsl:for-each css:select="#anon-personalbar > a">
+				<li><xsl:copy-of css:select="a" />
+				</li>
+			</xsl:for-each>
+		</after> 
+		<!-- Global navigation -add all tabs -->
+		<replace css:content="#portal-globalnav li" css:theme-children="#global-navigation" />
+		
+		<!--Breadcrumbs-->
+		<replace css:content-children="#portal-breadcrumbs" css:theme-children="#breadcrumbs" />
+		
+		<!--Document content and edit bar-->
         <replace css:content="#content" css:theme="#document-content" />
         <replace css:content="#edit-bar" css:theme="#document-content" />
+        
+        <!-- Drop navtree images-->
+        <drop css:content="dl#portletNavigationTree img" />
+        
+        <!-- Columns -->
+        <replace css:content-children="#portal-column-one" css:theme-children="#column-one" />
+        <replace css:content-children="#portal-column-two" css:theme-children="#column-two" />
+        
+        <!--Footer-->
+        <afte css:content="#kss-spinner" theme-children="/html/body" />
+        
 	</rules>
 </rules>
 
