@@ -8,19 +8,20 @@
     i18n_domain="optilux.theme">
 
   <five:registerPackage package="." initialize=".initialize" />
-  
-  <plone:static
-  		directory="resources"
-  		type="theme"
-  		/>
-  
+  <include package="plone.resource" file="meta.zcml"/> 
   <genericsetup:registerProfile
       name="default"
       title="Optilux Theme"
       directory="profiles/default"
-      description="Extension profile for the 'Optilux' Plone theme"
+      description='Extension profile for the "Optilux" Plone theme.'
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+   
+  <plone:static
+  	directory="resources"
+  	type="theme"
+  />
+  
   <!-- -*- extra stuff goes here -*- -->
   
 </configure>

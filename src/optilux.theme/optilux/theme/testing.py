@@ -13,12 +13,7 @@ class OptiluxTheme(PloneSandboxLayer):
     def setUpZope(self, app, configurationContext):
         #Load ZCML
         import optilux.theme
-        try:
-            #import pdb; pdb.set_trace()
-            xmlconfig.file('configure.zcml', optilux.theme, context=configurationContext)
-        except ConfigurationError, e:
-            xmlconfig.file('configure.zcml', optilux.theme, context=configurationContext)
-            #import pdb; pdb.set_trace()
+        xmlconfig.file('configure.zcml', optilux.theme, context=configurationContext)
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'optilux.theme:default')
 
