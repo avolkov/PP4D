@@ -47,7 +47,7 @@
 		
 		<!--Document content and edit bar-->
         <replace css:content="#content" css:theme="#document-content" />
-        <replace css:content="#edit-bar" css:theme="#document-content" />
+        <before css:content="#edit-bar" css:theme="#document-content" />
         
         <!-- Drop navtree images-->
         <drop css:content="dl#portletNavigationTree img" />
