@@ -19,8 +19,8 @@ class TestSetup(unittest.TestCase):
     def test_css_registry_configured(self):
         portal = self.layer['portal']
         cssRegistry = getToolByName(portal, 'portal_css')
-        self.assertTrue("++theme++optilux.theme/stylesheets/main.css") in cssRegistry.getSourceIds()
-        self.assertTrue("++theme++optilux.theme/stylesheets/iefixes.css" in cssRegistry.getSourceIds())
+        self.assertTrue("++theme++optilux.theme/stylesheets/main.css") in cssRegistry.getResourceIds()
+        self.assertTrue("++theme++optilux.theme/stylesheets/iefixes.css" in cssRegistry.getResourceIds())
     def test_theme_configured(self):
         registry = getUtility(IRegistry)
         settings = registry.forInterface(IThemeSettings)
@@ -41,6 +41,6 @@ class TestRendering(unittest.TestCase):
         portal = self.layer['portal']
         transaction.commit()
         browser = Browser(app)
-        browser.addHeader('Authorization' 'Basic %s:%s' % (SITE_OWNER_NAME, SITE_OWNER_PASSWORD))
+        browser.addHeader('Authorization', 'Basic %s:%s' % (SITE_OWNER_NAME, SITE_OWNER_PASSWORD))
         browser.open(portal.absolute_url()+'/manage_main')
-        self.assertFalse('<div id="wrapper">' in browser.contents())
+        self.assertFalse('<div id="wrapper">' in browser.contents)
