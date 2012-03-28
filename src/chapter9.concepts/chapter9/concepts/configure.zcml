@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="chapter9.concepts">
+
+  <includeDependencies package="." />
+  <genericsetup:registerProfile
+      name="default"
+      title="chapter9.concepts"
+      directory="profiles/default"
+      description="Installs the chapter9.concepts package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+  <!-- -*- extra stuff goes here -*- -->
+  
+</configure>
