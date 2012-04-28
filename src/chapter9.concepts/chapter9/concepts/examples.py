@@ -1,0 +1,1 @@
+from Products.CMFCore.PortalFolder import PortalFolder
